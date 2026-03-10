@@ -2,6 +2,8 @@
 
 # quic's shitty dotfiles
 
+<img src="https://github.com/maybequic/dotfiles/blob/main/screenshots.png?raw=true">
+
 </div>
 
 **hi there!** these are the dotfiles i daily drive, hope you like it

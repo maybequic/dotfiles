@@ -1,7 +1,5 @@
 # fish
 
----
-
 i made basically no changes to fish, the only plugins i use are:
 - [tide (for the prompt)](https://github.com/IlanCosman/tide)
 - [replay (qol)](https://github.com/jorgebucaran/replay.fish)

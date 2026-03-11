@@ -2,10 +2,8 @@
 
 # quic's shitty dotfiles
 
-<video 
-  <source src="https://github.com/maybequic/dotfiles/blob/main/assets/showcase.mp4?raw=true" type="video/mp4">
-  showcase vid. if you're seeing this, your browser prolly doens't support the video tag
-</video>
+https://github.com/maybequic/dotfiles/blob/main/assets/showcase.mp4?raw=true
+
 </div>
 
 **Hi there!** These are the dotfiles i daily drive

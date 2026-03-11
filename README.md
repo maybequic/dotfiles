@@ -2,7 +2,7 @@
 
 # quic's shitty dotfiles
 
-https://github.com/maybequic/dotfiles/blob/main/assets/showcase.mp4?raw=true
+https://github.com/maybequic/dotfiles/blob/main/assets/showcase.mp4
 
 </div>
 

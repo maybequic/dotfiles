@@ -10,7 +10,7 @@
 
 ### Desktop
 - OS: [Arch Linux](https://archlinux.org/)
-- WM: [swayfx](https://github.com/WillPower3309/swayfx)
+- WM: [swayfx](https://github.com/WillPower3309/swayfx), [niri](https://github.com/niri-wm/niri)
 - Bar: [waybar](https://github.com/Alexays/Waybar)
 - App launcher: [rofi](https://github.com/davatorium/rofi)
 

@@ -14,7 +14,7 @@
   ],
   "modules-right": [
     "pulseaudio",
-    "sway/language",
+    "niri/language",
     "clock",
     "custom/space"
   ],
@@ -37,7 +37,8 @@
     "interval": "1"
   },
   "clock": {
-    "format": "{:%B %d %I:%M %p} |  "
+    "format": "{:%B %d %I:%M %p} |  ",
+    "on-click": "swaync-client -t"
   },
   "pulseaudio": {
     "format": "{icon} {volume:2}%",
@@ -51,19 +52,18 @@
       ]
     },
     "scroll-step": 5,
-    "on-click": "pamixer -t",
-    "on-click-right": "pavucontrol"
+    "on-click": "pavucontrol",
   },
   "network": {
     "format-wifi": " ",
     "format-ethernet": "",
     "format-disconnected": "󱚼",
     "max-length": 30,
-    "on-click": "kitty -e 'nmtui'"
+    "on-click": "nm-applet"
   },
   "niri/language": {
     "format": "  {short}",
-    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    "on-click": "ydotool key 125:1 57:1 57:0 125:0"
   },
   "memory": {
     "interval": 1,

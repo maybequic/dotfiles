@@ -10,7 +10,7 @@ input {
         tap
         tap-button-map "left-right-middle"
 	scroll-method "two-finger"
-	natural-scroll
+	// natural-scroll
     }
 
     focus-follows-mouse max-scroll-amount="0%"
@@ -23,11 +23,17 @@ output "eDP-1" {
 
 prefer-no-csd
 
-spawn-sh-at-startup "sleep 0.3 && waybar --config /home/vshark/.config/waybar/config-niri"
-spawn-at-startup "wl-paste --watch cliphist store"
-spawn-at-startup "dunst"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "swww img ~/Pictures/walls/clouds-5.jpg --transition-type=outer"
+hotkey-overlay {
+    skip-at-startup
+}
+
+spawn-sh-at-startup "matuwall --daemon"
+spawn-at-startup "waybar" "--config" "/home/vshark/.config/waybar/config-niri"
+spawn-at-startup "ydotoold"
+spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
+spawn-at-startup "swaync"
+spawn-at-startup "awww-daemon"
+spawn-sh-at-startup "gsr-ui launch-daemon"
 
 layout {
     // Set gaps around windows in logical pixels.
@@ -103,7 +109,65 @@ layout {
     }
 }
 
- window-rule {
+animations {
+    // Uncomment to turn off all animations.
+    // You can also put "off" into each individual animation to disable it.
+    // off
+
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 3.0
+
+    // Individual animations.
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+
+    exit-confirmation-open-close {
+        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    }
+
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    recent-windows-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.001
+    }
+}
+
+window-rule {
   geometry-corner-radius 6
   clip-to-geometry true
 }
@@ -120,21 +184,23 @@ binds {
     Print { screenshot; }
 
     Mod+Return { spawn "kitty"; }
-    Shift+T { spawn "kitty"; }
+    Alt+Shift+T { spawn "kitty"; }
 
     Mod+BackSlash { spawn "nautilus"; }
 
-    Alt+Space { 
-    	spawn "rofi -modes combi -show combi -combi-modes drun,emoji,calc,run,ssh" 
-    }
+    Alt+Space { spawn "rofi" "-modes" "combi" "-show" "combi" "-combi-modes" "drun,emoji,run,ssh"; }
+
+    Ctrl+Space { spawn "matuwall"; }
 
     Mod+Shift+Period { 
-      spawn "rofi -show emoji"
+      spawn "rofi" "-show" "emoji"
     }
 
     Mod+Shift+Comma { 
-      spawn "rofi -modi clipboard:/home/vshark/progs/bin/cliphist-rofi-img -show clipboard -show-icons"
+      spawn "rofi" "-modi" "clipboard:/home/vshark/progs/bin/cliphist-rofi-img" "-show" "clipboard" "-show-icons"
     }
+
+    Mod+Slash { spawn "rofi" "-show" "calc"; }
 
     Mod+Space { 
       switch-layout "next"

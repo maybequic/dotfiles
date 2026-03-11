@@ -1,7 +1,7 @@
 /* ~/.config/waybar/style.css */
 
 * {
-	font-size: 16px;
+	font-size: 18px;
 	font-family: monospace;
 }
 
@@ -93,4 +93,14 @@ window#waybar {
 #custom-dnd,
 #language {
 	padding: 0 10px;
+}
+
+#workspaces button:hover,
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#clock:hover,
+#language:hover {
+    background: #494d64;
 }

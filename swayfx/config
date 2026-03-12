@@ -1,7 +1,0 @@
-# ~/.config/sway/config
-
-bar {
-    swaybar_command waybar
-}
-
-include /home/vshark/.config/sway/conf.d/*

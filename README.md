@@ -9,8 +9,8 @@
 **Hi there!** These are the dotfiles i daily drive
 
 ### Desktop
-- OS: [Arch Linux](https://archlinux.org/)
-- WM: [swayfx](https://github.com/WillPower3309/swayfx), [niri](https://github.com/niri-wm/niri)
+- OS: [Artix Linux](https://artixlinux.org/)
+- WM: [niri](https://github.com/niri-wm/niri)
 - Bar: [waybar](https://github.com/Alexays/Waybar)
 - App launcher: [rofi](https://github.com/davatorium/rofi)
 - Wallpaper switcher: [matuwall](https://github.com/naurissteins/Matuwall)

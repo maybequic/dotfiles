@@ -2,6 +2,11 @@
 
 # quic's shitty dotfiles
 
+**MIGRATED TO CODEBERG, THIS WON'T BE UPDATED \
+https://codeberg.org/forkd/dotfiles \
+https://codeberg.org/forkd/dotfiles \
+https://codeberg.org/forkd/dotfiles**
+
 [showcase here!](https://www.youtube.com/watch?v=XvYC8leEtnc)
 
 </div>

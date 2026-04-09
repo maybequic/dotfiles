@@ -2,6 +2,8 @@
 
 # fork's shitty dotfiles
 
+**i updated the dotfiles and made them a bit more minimal, if you want a more modern look please check out the old [repo on github](https://github.com/forkd96/dotfiles)**
+
 </div>
 
 \

@@ -1,8 +1,6 @@
 <div align="center">
 
-# quic's shitty dotfiles
-
-[showcase here!](https://www.youtube.com/watch?v=XvYC8leEtnc)
+# fork's shitty dotfiles
 
 </div>
 
@@ -12,7 +10,7 @@
 - OS: [Artix Linux](https://artixlinux.org/)
 - WM: [niri](https://github.com/niri-wm/niri)
 - Bar: [waybar](https://github.com/Alexays/Waybar)
-- App launcher: [rofi](https://github.com/davatorium/rofi)
+- App launcher: [fsel](https://github.com/Mjoyufull/fsel), [otter-launcher](https://github.com/kuokuo123/otter-launcher)
 - Wallpaper switcher: [matuwall](https://github.com/naurissteins/Matuwall)
 
 ### Terminal
@@ -23,10 +21,9 @@
 - Notifications: [swaync](https://github.com/ErikReider/SwayNotificationCenter)
 
 ### Themes / Fonts
-- Color scheme: [Catppuccin Macchiato](https://catppuccin.com/palette/) (primary color is mauve)
+- Color scheme: [Catppuccin Macchiato](https://catppuccin.com/palette/) (primary color is blue / mauve in some places)
 - Wallpapers: [orangci/walls-catppuccin-mocha](https://github.com/orangci/walls-catppuccin-mocha)
-- Font: JetBrains Mono Nerd for terminal, monospace for waybar
+- Font: JetBrainsMono Nerd Font
 - GTK theme: [Catppuccin by Fausto-Korpsvart](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme)
-- Rofi theme: slightly modified [rofi-catppuccin by hiimsergey](https://github.com/hiimsergey/rofi-catppuccin)
 
 - All other app themes: [Catppuccin ports](https://catppuccin.com/ports/)

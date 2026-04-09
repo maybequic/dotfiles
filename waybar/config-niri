@@ -1,22 +1,19 @@
 {
   "layer": "top",
   "position": "top",
+  "height": 32,
   "modules-left": [
-    "custom/space",
-    "battery",
     "niri/workspaces"
   ],
   "modules-center": [
-    "custom/space",
     "cpu",
-    "custom/runner",
     "memory"
   ],
   "modules-right": [
     "pulseaudio",
     "niri/language",
     "clock",
-    "custom/space"
+    "battery"
   ],
   "custom/space": {
     "format": " ",
@@ -37,8 +34,7 @@
     "interval": "1"
   },
   "clock": {
-    "format": "{:%B %d %I:%M %p} |  ",
-    "on-click": "swaync-client -t"
+    "format": "{:%B %d %I:%M %p} |  "
   },
   "pulseaudio": {
     "format": "{icon} {volume:2}%",
@@ -52,7 +48,7 @@
       ]
     },
     "scroll-step": 5,
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol"
   },
   "network": {
     "format-wifi": " ",
@@ -60,10 +56,6 @@
     "format-disconnected": "󱚼",
     "max-length": 30,
     "on-click": "nm-applet"
-  },
-  "niri/language": {
-    "format": "  {short}",
-    "on-click": "ydotool key 125:1 57:1 57:0 125:0"
   },
   "memory": {
     "interval": 1,
@@ -75,13 +67,18 @@
     "format": " {usage:2}%",
     "on-click": "gnome-system-monitor"
   },
+  "niri/language": {
+    "format": "  {short}",
+    "on-click": "ydotool key 125:1 57:1 57:0 125:0"
+  },
   "battery": {
     "states": {
       "good": 95,
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  | {capacity}%",
+    "format": "{icon} ",
+    "tooltip-format": "{capacity}%",
     "format-icons": [
       "",
       "",

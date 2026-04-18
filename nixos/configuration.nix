@@ -42,7 +42,6 @@
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  environment.shells = [ pkgs.fish ];
   services.flatpak.enable = true;
 
   services.xserver.enable = true;
@@ -69,9 +68,12 @@
 
   services.libinput.enable = true;
 
+  programs.fish.enable = true;
+
   users.users.forkd = {
     isNormalUser = true;
     description = "fork";
+    shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
@@ -91,6 +93,7 @@
 
   environment.systemPackages = with pkgs; [
     neovim
+    tree
     wget
     trayscale
     git

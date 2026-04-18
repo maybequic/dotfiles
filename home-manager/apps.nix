@@ -24,9 +24,5 @@
       catppuccin-kde
       catppuccin-qt5ct
     ];
-
-    username = "forkd";
-    homeDirectory = "/home/forkd";
-    stateVersion = "25.11";
   };
 }

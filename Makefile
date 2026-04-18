@@ -1,6 +1,6 @@
-.PHONY: update
+.PHONY: switch
 update:
-	home-manager switch --flake .#forkd
+	sudo nixos-rebuild switch
 .PHONY: clean
 clean:
 	nix-collect-garbage -d

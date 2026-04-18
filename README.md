@@ -35,19 +35,16 @@
 ## Installation 
 ### NixOS:
 > [!WARNING]  
-> This will overwrite your existing configuration.nix file. Though, we're talking about NixOS so you can just roll back at any time.
+> This will overwrite your existing configuration.nix file. Though, the script backs up /etc/nixos and we're talking about NixOS so you can just roll back at any time.
 
 ```shell
-sudo nixos-generate-config
-cd ~
-nix shell nixpkgs#git --command git clone https://codeberg.org/forkd/dotfiles
-cd dotfiles
-sudo ln -sf ~/dotfiles/nixos/flake.lock /etc/nixos/flake.lock
-sudo ln -sf ~/dotfiles/nixos/flake.nix /etc/nixos/flake.nix
-sudo ln -sf ~/dotfiles/nixos/configuration.nix /etc/nixos/configuration.nix
+sudo nixos-generate-config --show-hardware-config > /tmp/hardware-configuration.nix
+nix-shell -p git --run "git clone https://codeberg.org/forkd/dotfiles ~/dotfiles"
+cp /tmp/hardware-configuration.nix ~/dotfiles/nixos/hardware-configuration.nix
+sudo mv /etc/nixos /etc/nixos.bak
+sudo ln -sf /home/$USER/dotfiles /etc/nixos
 sudo nixos-rebuild switch
-nix shell nixpkgs#home-manager --command home-manager switch --flake .#<REPLACE-ME-username>
 ```
 
 ### Other distros:
-- Just drop in stuff from .config in the repo's root into your actual ~/.config and you're golden
+- Just drop in stuff from .config in the repo's root into your actual ~/.config and you're golden. .config may be outdated compared to HM though, because i mainly use home manager

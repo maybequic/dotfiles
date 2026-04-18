@@ -30,7 +30,7 @@
     }
 
     spawn-sh-at-startup "matuwall --daemon"
-    spawn-at-startup "waybar" "--config" "/home/forkd/.config/waybar/config"
+    spawn-at-startup "waybar" "--config" "${config.xdg.configHome}/waybar/config"
     spawn-at-startup "ydotoold"
     spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
     spawn-at-startup "swaync"
@@ -163,10 +163,6 @@
 
         Mod+Shift+Period {
             spawn "rofi" "-show" "emoji"
-        }
-
-        Mod+Shift+Comma {
-            spawn "rofi" "-modi" "clipboard:/home/forkd/progs/bin/cliphist-rofi-img" "-show" "clipboard" "-show-icons"
         }
 
         Mod+Slash { spawn "rofi" "-show" "calc"; }
